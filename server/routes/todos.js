@@ -78,3 +78,7 @@ router.delete('/', requireAuth, (req, res) => {
       res.status(400).send({ message: 'Delete todo failed', err });
     });
 });
+
+router.get('/health', (req, res) => {
+  res.send({ message: 'Server is up' });
+});
